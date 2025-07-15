@@ -1,0 +1,102 @@
+.form {
+    height: 350px;
+    position: relative;
+    /* overflow: hidden; */
+}
+
+.login,
+.signup {
+    width: 95%;
+    height: 300;
+    /* margin: 1rem; */
+    padding: 1rem;
+    position: absolute;
+    top: 0;
+    box-shadow: 0 0 15px rgb(168, 168, 168);
+    border-radius: 1rem;
+}
+
+.logani-come {
+    left: -100%;
+    /* transition: .3s ease-in-out; */
+    animation: login .6s ease-in-out 1 forwards;
+    /* border: 1px solid green; */
+    transform: rotateZ(-45deg);
+}
+.logani-go {
+    left: 0%;
+    transform: rotateZ(0deg);
+    animation: gologin .6s ease-in-out 1 forwards;
+}
+@keyframes gologin {
+    100% {
+        left: -530px;
+        transform: rotateZ(-45deg);
+    }
+}
+
+.loginBtn.active {
+    background-color: #000000e6;
+}
+.signupBtn.active {
+    background-color: #000000e6;
+}
+.signup-come {
+    right: -100%;
+    /* transition: .3s ease-in-out; */
+    animation: signup .6s ease-in-out 1 forwards;
+    /* border: 1px solid green; */
+    transform: rotateZ(45deg);
+}
+.signup-go {
+    right: 0%;
+    transform: rotateZ(0deg);
+    animation: gosignup .6s ease-in-out 1 forwards;
+}
+@keyframes gosignup {
+    100% {
+        right: -560px;
+        transform: rotateZ(45deg);
+    }
+}
+
+.pass {
+    position: relative;
+}
+.warn {
+    padding: 3px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    opacity: 0;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgb(168, 168, 168);
+    animation: warn .3s ease-in-out 1 forwards;
+}
+@keyframes warn {
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+}
+.img {
+    width: 30px;
+    position: absolute;
+    top: 36px;
+    right: 20px;
+    cursor: pointer;
+}
+
+@keyframes login {
+    100% {
+        left: 0%;
+        transform: rotateZ(0deg);
+    }
+}
+
+@keyframes signup {
+    100% {
+        right: 0%;
+        transform: rotateZ(0deg);
+    }
+}
